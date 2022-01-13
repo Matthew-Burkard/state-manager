@@ -12,4 +12,6 @@ func set(key: String, value: Variant) -> void:
 
 
 func get(key: String) -> Variant:
-	return _state[key]
+	if _state.has(key):
+		return _state[key]
+	return null
